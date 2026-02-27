@@ -31,14 +31,7 @@ const EMOJIS = [
 	"🐼",
 ];
 
-const DEFAULT_MEMBERS: Member[] = [
-	{ id: "1", name: "小明", emoji: "😀", playCount: 0, status: "waiting", paid: false },
-	{ id: "2", name: "小紅", emoji: "😎", playCount: 1, status: "waiting", paid: false },
-	{ id: "3", name: "大偉", emoji: "🥷", playCount: 0, status: "waiting", paid: false },
-	{ id: "4", name: "小芳", emoji: "🤩", playCount: 2, status: "waiting", paid: false },
-	{ id: "5", name: "志明", emoji: "😄", playCount: 0, status: "waiting", paid: false },
-	{ id: "6", name: "美麗", emoji: "🥸", playCount: 1, status: "waiting", paid: false },
-];
+const DEFAULT_MEMBERS: Member[] = [];
 
 export type CourtSlots = [string | null, string | null, string | null, string | null];
 
@@ -61,6 +54,7 @@ interface BadmintonState {
 	setSessionFee: (fee: number) => void;
 	reorderWaiting: (ids: string[]) => void;
 	clearCourt: (courtIndex: number) => void;
+	adjustPlayCount: (id: string, delta: number) => void;
 	resetAll: () => void;
 }
 
@@ -206,6 +200,14 @@ export const useBadmintonStore = create<BadmintonState>()(
 
 			reorderWaiting: (ids) => {
 				set({ waitingOrder: ids });
+			},
+
+			adjustPlayCount: (id, delta) => {
+				set((s) => ({
+					members: s.members.map((m) =>
+						m.id === id ? { ...m, playCount: Math.max(0, m.playCount + delta) } : m
+					),
+				}));
 			},
 
 			clearCourt: (courtIndex) => {

@@ -1,28 +1,17 @@
 "use client";
 
 import { useState } from "react";
-import {
-	AlertDialog,
-	AlertDialogAction,
-	AlertDialogCancel,
-	AlertDialogContent,
-	AlertDialogDescription,
-	AlertDialogFooter,
-	AlertDialogHeader,
-	AlertDialogTitle,
-	AlertDialogTrigger,
-} from "@/components/ui/alert-dialog";
+import { toast } from "sonner";
+import { BadmintonCourt } from "@/components/badminton-court";
 import {
 	Dialog,
 	DialogContent,
+	DialogDescription,
 	DialogHeader,
 	DialogTitle,
-	DialogDescription,
 } from "@/components/ui/dialog";
-import { BadmintonCourt } from "@/components/badminton-court";
 import type { Member } from "@/store/badminton-store";
 import { useBadmintonStore } from "@/store/badminton-store";
-import { toast } from "sonner";
 
 // ── Member Card ────────────────────────────────────────────────────────────────
 function MemberCard({
@@ -81,60 +70,124 @@ function WaitingCard({
 	onMoveToRest: () => void;
 	onRemove: () => void;
 }) {
+	const { adjustPlayCount } = useBadmintonStore();
+	const [editingCount, setEditingCount] = useState(false);
+	const [removeOpen, setRemoveOpen] = useState(false);
+
 	return (
 		<MemberCard
 			member={member}
 			rank={rank}
 			highlight={isInNextMatch}
 			actions={
-				<div className="flex gap-1.5 shrink-0">
-					{isInNextMatch ? (
+				editingCount ? (
+					<div className="flex items-center gap-1 shrink-0">
 						<button
 							type="button"
-							onClick={onMoveToSubstitute}
-							className="text-xs font-bold px-2.5 py-1.5 rounded-xl bg-white/15 hover:bg-white/25 text-white/60 border border-white/20 transition-colors"
+							onClick={() => adjustPlayCount(member.id, -1)}
+							className="w-7 h-7 flex items-center justify-center rounded-lg bg-white/15 hover:bg-white/25 text-white font-black text-base border border-white/20 transition-colors"
 						>
-							候補
+							−
 						</button>
-					) : !nextMatchFull ? (
+						<span className="text-xs font-black text-white min-w-9 text-center">
+							{member.playCount} 場
+						</span>
 						<button
 							type="button"
-							onClick={onMoveToNextMatch}
-							className="text-xs font-bold px-2.5 py-1.5 rounded-xl bg-yellow-500/40 hover:bg-yellow-500/60 text-yellow-200 border border-yellow-400/30 transition-colors"
+							onClick={() => adjustPlayCount(member.id, 1)}
+							className="w-7 h-7 flex items-center justify-center rounded-lg bg-white/15 hover:bg-white/25 text-white font-black text-base border border-white/20 transition-colors"
 						>
-							下一場
+							+
 						</button>
-					) : null}
-					<button
-						type="button"
-						onClick={onMoveToRest}
-						className="text-xs font-bold px-2.5 py-1.5 rounded-xl bg-purple-500/40 hover:bg-purple-500/60 text-purple-200 border border-purple-400/30 transition-colors"
-					>
-						休息
-					</button>
-					<AlertDialog>
-						<AlertDialogTrigger asChild>
+						<button
+							type="button"
+							onClick={() => setEditingCount(false)}
+							className="w-7 h-7 flex items-center justify-center rounded-lg bg-emerald-500/40 hover:bg-emerald-500/60 text-emerald-200 font-black text-xs border border-emerald-400/30 transition-colors"
+						>
+							✓
+						</button>
+					</div>
+				) : (
+					<div className="flex gap-1.5 shrink-0">
+						<button
+							type="button"
+							onClick={() => setEditingCount(true)}
+							className="text-xs font-bold px-2.5 py-1.5 rounded-xl bg-white/10 hover:bg-white/20 text-white/50 border border-white/15 transition-colors"
+						>
+							✎
+						</button>
+						{isInNextMatch ? (
 							<button
 								type="button"
-								className="text-xs font-bold px-2.5 py-1.5 rounded-xl bg-red-500/40 hover:bg-red-500/60 text-red-200 border border-red-400/30 transition-colors"
+								onClick={onMoveToSubstitute}
+								className="text-xs font-bold px-2.5 py-1.5 rounded-xl bg-white/15 hover:bg-white/25 text-white/60 border border-white/20 transition-colors"
 							>
-								✕
+								候補
 							</button>
-						</AlertDialogTrigger>
-						<AlertDialogContent>
-							<AlertDialogHeader>
-								<AlertDialogTitle>移除成員</AlertDialogTitle>
-								<AlertDialogDescription>
-									確定要移除 {member.emoji} {member.name}？
-								</AlertDialogDescription>
-							</AlertDialogHeader>
-							<AlertDialogFooter>
-								<AlertDialogCancel>取消</AlertDialogCancel>
-								<AlertDialogAction onClick={onRemove}>移除</AlertDialogAction>
-							</AlertDialogFooter>
-						</AlertDialogContent>
-					</AlertDialog>
-				</div>
+						) : !nextMatchFull ? (
+							<button
+								type="button"
+								onClick={onMoveToNextMatch}
+								className="text-xs font-bold px-2.5 py-1.5 rounded-xl bg-yellow-500/40 hover:bg-yellow-500/60 text-yellow-200 border border-yellow-400/30 transition-colors"
+							>
+								下一場
+							</button>
+						) : null}
+						<button
+							type="button"
+							onClick={onMoveToRest}
+							className="text-xs font-bold px-2.5 py-1.5 rounded-xl bg-purple-500/40 hover:bg-purple-500/60 text-purple-200 border border-purple-400/30 transition-colors"
+						>
+							休息
+						</button>
+						<button
+							type="button"
+							onClick={() => setRemoveOpen(true)}
+							className="text-xs font-bold px-2.5 py-1.5 rounded-xl bg-red-500/40 hover:bg-red-500/60 text-red-200 border border-red-400/30 transition-colors"
+						>
+							✕
+						</button>
+						<Dialog open={removeOpen} onOpenChange={setRemoveOpen}>
+							<DialogContent className="border-0 bg-transparent shadow-none p-0 max-w-sm w-full gap-0 overflow-hidden rounded-3xl">
+								<div style={{ background: "linear-gradient(160deg, #16a34a 0%, #166534 100%)" }}>
+									<DialogHeader className="text-center px-6 pt-5 pb-4">
+										<DialogTitle className="text-lg font-black text-white">移除成員</DialogTitle>
+										<DialogDescription className="text-sm text-emerald-200">
+											確定要移除 {member.emoji} {member.name}？
+										</DialogDescription>
+									</DialogHeader>
+								</div>
+								<div className="bg-[#0a1c10] px-5 py-4 flex gap-3">
+									<button
+										type="button"
+										onClick={() => setRemoveOpen(false)}
+										className="flex-1 py-3.5 rounded-2xl font-black text-base text-white shadow-lg"
+										style={{
+											background: "linear-gradient(160deg, #374151, #1f2937)",
+											border: "2px solid rgba(255,255,255,0.15)",
+										}}
+									>
+										取消
+									</button>
+									<button
+										type="button"
+										onClick={() => {
+											onRemove();
+											setRemoveOpen(false);
+										}}
+										className="flex-1 py-3.5 rounded-2xl font-black text-base text-white shadow-lg"
+										style={{
+											background: "linear-gradient(160deg, #ef4444, #dc2626)",
+											border: "2px solid #f87171",
+										}}
+									>
+										移除
+									</button>
+								</div>
+							</DialogContent>
+						</Dialog>
+					</div>
+				)
 			}
 		/>
 	);
@@ -321,10 +374,7 @@ function SlotAssignDrawer({
 						<p className="text-center text-white/40 py-8 text-sm">沒有等候中的球友</p>
 					) : (
 						waitingMembers.map((m) => (
-							<div
-								key={m.id}
-								className="w-full flex items-center gap-3 px-5 py-3.5"
-							>
+							<div key={m.id} className="w-full flex items-center gap-3 px-5 py-3.5">
 								<div className="w-11 h-11 rounded-full flex items-center justify-center text-2xl border-2 border-white/20 bg-white/10 shrink-0">
 									{m.emoji}
 								</div>
@@ -398,8 +448,8 @@ function AddMemberBar() {
 						handleAdd();
 					}
 				}}
-				placeholder={"新增成員名稱…\n(多行 = 批次新增)"}
-				className="flex-1 bg-white/10 border border-white/20 rounded-2xl px-4 py-2.5 text-white placeholder:text-white/35 text-sm outline-none focus:bg-white/15 focus:border-white/35 transition-colors resize-none min-h-[44px] field-sizing-content"
+				placeholder={"新增成員名稱… (多行 = 批次新增)"}
+				className="flex-1 bg-white/10 border border-white/20 rounded-2xl px-4 py-2.5 text-white placeholder:text-white/35 text-base outline-none focus:bg-white/15 focus:border-white/35 transition-colors resize-none min-h-[44px] field-sizing-content"
 			/>
 			<button
 				type="button"
@@ -532,7 +582,6 @@ export function BadmintonApp() {
 		setSelectedSlot(null);
 	}
 
-
 	function handleFinishAndFill(courtIndex: number) {
 		finishMatch(courtIndex);
 		autoFillSlots(courtIndex);
@@ -650,6 +699,7 @@ export function BadmintonApp() {
 						<EmptyHint text="沒有等候中的成員" />
 					) : (
 						<>
+							{/* 下一場 */}
 							<div className="flex items-center gap-2 px-1 pb-0.5">
 								<span className="text-xs font-black text-yellow-300">🎯 下一場</span>
 								<div className="flex-1 h-px bg-yellow-400/30" />
@@ -663,26 +713,50 @@ export function BadmintonApp() {
 									</button>
 								)}
 							</div>
-							{waiting.map((m, idx) => (
-								<div key={m.id}>
-									{idx === effectiveBoundary && (
-										<div className="flex items-center gap-2 px-1 pt-1 pb-0.5">
-											<span className="text-xs font-black text-white/35">🪑 候補</span>
-											<div className="flex-1 h-px bg-white/15" />
-										</div>
-									)}
-									<WaitingCard
-										member={m}
-										rank={idx}
-										isInNextMatch={idx < effectiveBoundary}
-										nextMatchFull={effectiveBoundary >= 4}
-										onMoveToSubstitute={() => moveToSubstitute(m.id)}
-										onMoveToNextMatch={() => moveToNextMatch(m.id)}
-										onMoveToRest={() => handleMoveToRest(m.id)}
-										onRemove={() => handleRemoveMember(m.id)}
-									/>
-								</div>
-							))}
+							{effectiveBoundary === 0 ? (
+								<EmptyHint text="尚無下一場球友" />
+							) : (
+								waiting
+									.slice(0, effectiveBoundary)
+									.map((m, idx) => (
+										<WaitingCard
+											key={m.id}
+											member={m}
+											rank={idx}
+											isInNextMatch={true}
+											nextMatchFull={effectiveBoundary >= 4}
+											onMoveToSubstitute={() => moveToSubstitute(m.id)}
+											onMoveToNextMatch={() => moveToNextMatch(m.id)}
+											onMoveToRest={() => handleMoveToRest(m.id)}
+											onRemove={() => handleRemoveMember(m.id)}
+										/>
+									))
+							)}
+
+							{/* 候補 */}
+							<div className="flex items-center gap-2 px-1 pt-1 pb-0.5">
+								<span className="text-xs font-black text-white/35">🪑 候補</span>
+								<div className="flex-1 h-px bg-white/15" />
+							</div>
+							{effectiveBoundary >= waiting.length ? (
+								<EmptyHint text="尚無候補球友" />
+							) : (
+								waiting
+									.slice(effectiveBoundary)
+									.map((m, idx) => (
+										<WaitingCard
+											key={m.id}
+											member={m}
+											rank={effectiveBoundary + idx}
+											isInNextMatch={false}
+											nextMatchFull={effectiveBoundary >= 4}
+											onMoveToSubstitute={() => moveToSubstitute(m.id)}
+											onMoveToNextMatch={() => moveToNextMatch(m.id)}
+											onMoveToRest={() => handleMoveToRest(m.id)}
+											onRemove={() => handleRemoveMember(m.id)}
+										/>
+									))
+							)}
 						</>
 					)}
 				</Panel>

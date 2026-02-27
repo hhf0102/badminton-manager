@@ -16,6 +16,12 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
 	title: "🏸 羽球場管理",
 	description: "羽球場地管理 App",
+	viewport: {
+		width: "device-width",
+		initialScale: 1,
+		maximumScale: 1,
+		userScalable: false,
+	},
 };
 
 export default function RootLayout({

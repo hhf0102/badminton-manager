@@ -9,7 +9,7 @@ const C = { x: 60, y: 30, w: 280, h: 360 } as const;
 const NET_Y = C.y + C.h / 2; // 210
 const CENTER_X = C.x + C.w / 2; // 200
 
-const SSL = 55; // short service line: compressed
+const SSL = 40; // short service line: compressed
 const LSL = 20; // long service line: compressed
 const TOP_SSL = NET_Y - SSL; // 155
 const BOT_SSL = NET_Y + SSL; // 265
@@ -112,8 +112,16 @@ function PlayerSlot({
 			<g
 				role="button"
 				tabIndex={0}
-				onClick={(e) => { e.stopPropagation(); onRemove?.(); }}
-				onKeyDown={(e) => { if (e.key === "Enter") { e.stopPropagation(); onRemove?.(); } }}
+				onClick={(e) => {
+					e.stopPropagation();
+					onRemove?.();
+				}}
+				onKeyDown={(e) => {
+					if (e.key === "Enter") {
+						e.stopPropagation();
+						onRemove?.();
+					}
+				}}
 				style={{ cursor: onRemove ? "pointer" : "default" }}
 			>
 				<circle cx={x + 22} cy={y - 20} r={11} fill="#EF4444" stroke="white" strokeWidth="2" />
@@ -258,7 +266,13 @@ export function BadmintonCourt({ players, onSlotClick, onRemovePlayer }: Badmint
 					onKeyDown={(e) => e.key === "Enter" && onSlotClick?.(i)}
 					style={{ cursor: onSlotClick ? "pointer" : "default" }}
 				>
-					<PlayerSlot x={pos.x} y={pos.y} player={players[i]} index={i} onRemove={players[i] ? () => onRemovePlayer?.(i) : undefined} />
+					<PlayerSlot
+						x={pos.x}
+						y={pos.y}
+						player={players[i]}
+						index={i}
+						onRemove={players[i] ? () => onRemovePlayer?.(i) : undefined}
+					/>
 				</g>
 			))}
 		</svg>

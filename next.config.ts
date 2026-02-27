@@ -2,7 +2,7 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
 	output: "export",
-	basePath: "/badminton-manager",
+	basePath: process.env.NODE_ENV === "production" ? "/badminton-manager" : "",
 };
 
 export default nextConfig;
