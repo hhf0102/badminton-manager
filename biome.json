@@ -1,0 +1,62 @@
+{
+	"$schema": "https://biomejs.dev/schemas/2.4.4/schema.json",
+	"vcs": {
+		"enabled": true,
+		"clientKind": "git",
+		"useIgnoreFile": true
+	},
+	"files": {
+		"ignoreUnknown": true,
+		"includes": ["src/**", "*.ts", "*.tsx", "*.json", "!.next", "!node_modules"]
+	},
+	"formatter": {
+		"enabled": true,
+		"indentStyle": "tab",
+		"lineWidth": 100
+	},
+	"linter": {
+		"enabled": true,
+		"rules": {
+			"recommended": true,
+			"a11y": {
+				"recommended": true
+			}
+		}
+	},
+	"javascript": {
+		"formatter": {
+			"quoteStyle": "double",
+			"trailingCommas": "es5"
+		}
+	},
+	"css": {
+		"parser": {
+			"cssModules": false,
+			"tailwindDirectives": true
+		}
+	},
+	"overrides": [
+		{
+			"includes": ["src/components/badminton-court.tsx"],
+			"linter": {
+				"rules": {
+					"a11y": {
+						"noStaticElementInteractions": "off",
+						"useSemanticElements": "off"
+					},
+					"suspicious": {
+						"noArrayIndexKey": "off"
+					}
+				}
+			}
+		}
+	],
+	"assist": {
+		"enabled": true,
+		"actions": {
+			"source": {
+				"organizeImports": "on"
+			}
+		}
+	}
+}

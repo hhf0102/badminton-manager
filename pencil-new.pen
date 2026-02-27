@@ -1,0 +1,2085 @@
+{
+  "version": "2.8",
+  "children": [
+    {
+      "type": "frame",
+      "id": "aTPeg",
+      "x": 493,
+      "y": 0,
+      "name": "Payment Screen",
+      "clip": true,
+      "width": 393,
+      "height": 852,
+      "fill": "#0A1C10",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "X0OXX",
+          "name": "sBar2",
+          "width": "fill_container",
+          "height": 62,
+          "fill": "#0A1C10",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "cyNlW",
+              "name": "sTime2",
+              "fill": "#FFFFFF",
+              "content": "9:41",
+              "fontFamily": "Inter",
+              "fontSize": 15,
+              "fontWeight": "600"
+            },
+            {
+              "type": "icon_font",
+              "id": "eV9m5",
+              "name": "sBatt2",
+              "width": 0,
+              "height": 0,
+              "iconFontFamily": "Material Symbols Rounded",
+              "fill": "#FFFFFF"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "m5CSG",
+          "name": "scrl2",
+          "clip": true,
+          "width": "fill_container",
+          "height": "fill_container",
+          "layout": "vertical",
+          "children": [
+            {
+              "type": "frame",
+              "id": "0B8YR",
+              "name": "wrp2",
+              "width": "fill_container",
+              "layout": "vertical",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "12VDf",
+                  "name": "navHdr",
+                  "width": "fill_container",
+                  "height": 240,
+                  "fill": "#16a34a",
+                  "layout": "vertical",
+                  "gap": 10,
+                  "padding": [
+                    32,
+                    20,
+                    24,
+                    20
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "fLaJT",
+                      "name": "coinBubble",
+                      "width": 64,
+                      "height": 64,
+                      "fill": "#FBBF24",
+                      "cornerRadius": 32,
+                      "stroke": {
+                        "align": "inside",
+                        "thickness": 3
+                      },
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "NPnda",
+                          "content": "💰",
+                          "fontFamily": "Inter",
+                          "fontSize": 30,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "9QIB0",
+                      "fill": "#FFFFFF",
+                      "content": "費用收款",
+                      "fontFamily": "Inter",
+                      "fontSize": 20,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "Z2YxV",
+                      "opacity": 0.7,
+                      "fill": "#FFFFFF",
+                      "content": "共 8 位成員",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "8Iz58",
+                      "name": "feeRow",
+                      "width": "fill_container",
+                      "fill": "rgba(255,255,255,0.18)",
+                      "cornerRadius": 16,
+                      "gap": 10,
+                      "padding": [
+                        10,
+                        16
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "VUv8x",
+                          "fill": "rgba(255,255,255,0.8)",
+                          "content": "每人費用",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "40wyk",
+                          "fill": "#FFFFFF",
+                          "content": "$150",
+                          "fontFamily": "Inter",
+                          "fontSize": 16,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "oESlf",
+                          "name": "unpaidBadge",
+                          "fill": "rgba(239,68,68,0.85)",
+                          "cornerRadius": 12,
+                          "padding": [
+                            4,
+                            8
+                          ],
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "bNvNl",
+                              "fill": "#FFFFFF",
+                              "content": "未付 2 人",
+                              "fontFamily": "Inter",
+                              "fontSize": 11,
+                              "fontWeight": "700"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "VEIV0",
+                  "name": "sumCard",
+                  "width": "fill_container",
+                  "fill": "#0F2417",
+                  "cornerRadius": 16,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1
+                  },
+                  "layout": "vertical",
+                  "gap": 14,
+                  "padding": [
+                    16,
+                    20
+                  ],
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "pUdb8",
+                      "name": "sumHdr",
+                      "width": "fill_container",
+                      "gap": 8,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "YsnoA",
+                          "name": "sumTitle",
+                          "fill": "#86EFAC",
+                          "content": "本場費用統計",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "qIK5F",
+                          "name": "feeBadge",
+                          "fill": "#1E2600",
+                          "cornerRadius": 8,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "rTdEc",
+                              "name": "feeBadgeTxt",
+                              "fill": "#D4FF00",
+                              "content": "NT$150 / 人",
+                              "fontFamily": "Inter",
+                              "fontSize": 11,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "VJdIm",
+                      "name": "statsRow",
+                      "width": "fill_container",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "WUr7A",
+                          "name": "paidBlk",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "gap": 4,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "Y6E9p",
+                              "name": "paidNum",
+                              "fill": "#32D74B",
+                              "content": "7",
+                              "fontFamily": "Inter",
+                              "fontSize": 44,
+                              "fontWeight": "700"
+                            },
+                            {
+                              "type": "text",
+                              "id": "OQGwv",
+                              "name": "paidSub",
+                              "fill": "#86EFAC",
+                              "content": "已繳費  ·  NT$900",
+                              "fontFamily": "Inter",
+                              "fontSize": 11,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "UuaJr",
+                          "name": "unpaidBlk",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "gap": 4,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "gY1fs",
+                              "name": "unpaidNum",
+                              "fill": "#FF453A",
+                              "content": "2",
+                              "fontFamily": "Inter",
+                              "fontSize": 44,
+                              "fontWeight": "700"
+                            },
+                            {
+                              "type": "text",
+                              "id": "sOJ4k",
+                              "name": "unpaidSub",
+                              "fill": "#FCA5A5",
+                              "content": "未繳費  ·  NT$300",
+                              "fontFamily": "Inter",
+                              "fontSize": 11,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "FWkA2",
+                      "name": "prgTrack",
+                      "width": "fill_container",
+                      "height": 8,
+                      "fill": "#1A3A1A",
+                      "cornerRadius": 4,
+                      "layout": "none",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "5w0Vr",
+                          "x": 0,
+                          "y": 0,
+                          "name": "prgFill",
+                          "width": 241,
+                          "height": 8,
+                          "fill": "#22C55E",
+                          "cornerRadius": 4
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "5hC2k",
+                      "name": "amtTxt",
+                      "fill": "rgba(255,255,255,0.35)",
+                      "content": "已收 NT$900  ·  總計 NT$1,200  ·  完成率 75%",
+                      "fontFamily": "Inter",
+                      "fontSize": 11,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "nkgok",
+                  "name": "Player List",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 6,
+                  "padding": [
+                    12,
+                    16
+                  ],
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "JHGQ2",
+                      "name": "listHdrRow",
+                      "width": "fill_container",
+                      "gap": 8,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "rectangle",
+                          "id": "N7sqW",
+                          "name": "listAccent",
+                          "fill": "#2D5A2D",
+                          "width": 24,
+                          "height": 2
+                        },
+                        {
+                          "type": "text",
+                          "id": "XbzXO",
+                          "name": "listLabel",
+                          "fill": "#4A8A4A",
+                          "content": "PLAYER LIST · 繳費名單",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "700",
+                          "letterSpacing": 2
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "w0Sud",
+                      "name": "q1Row",
+                      "width": "fill_container",
+                      "fill": "#132D1A",
+                      "cornerRadius": 12,
+                      "stroke": {
+                        "align": "inside",
+                        "thickness": 1
+                      },
+                      "gap": 10,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "Qlyeh",
+                          "name": "q1Av",
+                          "width": 40,
+                          "height": 40,
+                          "fill": "#2A4AB8",
+                          "cornerRadius": 20,
+                          "layout": "vertical",
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "WfLCC",
+                              "name": "q1Init",
+                              "fill": "#FFFFFF",
+                              "content": "明",
+                              "fontFamily": "Inter",
+                              "fontSize": 14,
+                              "fontWeight": "700"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "lIOi1",
+                          "name": "q1Info",
+                          "fill": "#FFFFFF",
+                          "content": "小明  ·  2次上場",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "aNa58",
+                          "name": "q1Badge",
+                          "fill": "#0A3318",
+                          "cornerRadius": 14,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "ClZVG",
+                              "name": "q1BadgeTxt",
+                              "fill": "#32D74B",
+                              "content": "已繳費 ✓",
+                              "fontFamily": "Inter",
+                              "fontSize": 11,
+                              "fontWeight": "700"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "LXaEt",
+                      "name": "q2Row",
+                      "width": "fill_container",
+                      "fill": "#1A100A",
+                      "cornerRadius": 12,
+                      "stroke": {
+                        "align": "inside",
+                        "thickness": 1
+                      },
+                      "gap": 10,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "a7fDK",
+                          "name": "q2Av",
+                          "width": 40,
+                          "height": 40,
+                          "fill": "#1A6B3A",
+                          "cornerRadius": 20,
+                          "layout": "vertical",
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "dxU02",
+                              "name": "q2Init",
+                              "fill": "#FFFFFF",
+                              "content": "豪",
+                              "fontFamily": "Inter",
+                              "fontSize": 14,
+                              "fontWeight": "700"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "bnq3P",
+                          "name": "q2Info",
+                          "fill": "#FFFFFF",
+                          "content": "志豪  ·  3次上場",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "GIVNZ",
+                          "name": "q2Badge",
+                          "fill": "#3B0A0A",
+                          "cornerRadius": 14,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "CurrV",
+                              "name": "q2BadgeTxt",
+                              "fill": "#FF453A",
+                              "content": "未繳費",
+                              "fontFamily": "Inter",
+                              "fontSize": 11,
+                              "fontWeight": "700"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "GZA5x",
+                      "name": "q3Row",
+                      "width": "fill_container",
+                      "fill": "#132D1A",
+                      "cornerRadius": 12,
+                      "stroke": {
+                        "align": "inside",
+                        "thickness": 1
+                      },
+                      "gap": 10,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "yiKWq",
+                          "name": "q3Av",
+                          "width": 40,
+                          "height": 40,
+                          "fill": "#7B2D8B",
+                          "cornerRadius": 20,
+                          "layout": "vertical",
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "4OD2R",
+                              "name": "q3Init",
+                              "fill": "#FFFFFF",
+                              "content": "婷",
+                              "fontFamily": "Inter",
+                              "fontSize": 14,
+                              "fontWeight": "700"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "dP9fH",
+                          "name": "q3Info",
+                          "fill": "#FFFFFF",
+                          "content": "雅婷  ·  1次上場",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "oMHfT",
+                          "name": "q3Badge",
+                          "fill": "#0A3318",
+                          "cornerRadius": 14,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "AV0tB",
+                              "name": "q3BadgeTxt",
+                              "fill": "#32D74B",
+                              "content": "已繳費 ✓",
+                              "fontFamily": "Inter",
+                              "fontSize": 11,
+                              "fontWeight": "700"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "uNb5Y",
+                      "name": "q4Row",
+                      "width": "fill_container",
+                      "fill": "#1A100A",
+                      "cornerRadius": 12,
+                      "stroke": {
+                        "align": "inside",
+                        "thickness": 1
+                      },
+                      "gap": 10,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "iL40R",
+                          "name": "q4Av",
+                          "width": 40,
+                          "height": 40,
+                          "fill": "#B85C00",
+                          "cornerRadius": 20,
+                          "layout": "vertical",
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "RNq0o",
+                              "name": "q4Init",
+                              "fill": "#FFFFFF",
+                              "content": "宏",
+                              "fontFamily": "Inter",
+                              "fontSize": 14,
+                              "fontWeight": "700"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "R35GJ",
+                          "name": "q4Info",
+                          "fill": "#FFFFFF",
+                          "content": "建宏  ·  4次上場",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "BY3bo",
+                          "name": "q4Badge",
+                          "fill": "#3B0A0A",
+                          "cornerRadius": 14,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "AsAtJ",
+                              "name": "q4BadgeTxt",
+                              "fill": "#FF453A",
+                              "content": "未繳費",
+                              "fontFamily": "Inter",
+                              "fontSize": 11,
+                              "fontWeight": "700"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "amFxz",
+                      "name": "q5Row",
+                      "width": "fill_container",
+                      "fill": "#132D1A",
+                      "cornerRadius": 12,
+                      "stroke": {
+                        "align": "inside",
+                        "thickness": 1
+                      },
+                      "gap": 10,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "OTRb0",
+                          "name": "q5Av",
+                          "width": 40,
+                          "height": 40,
+                          "fill": "#8B1A1A",
+                          "cornerRadius": 20,
+                          "layout": "vertical",
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "VMscS",
+                              "name": "q5Init",
+                              "fill": "#FFFFFF",
+                              "content": "君",
+                              "fontFamily": "Inter",
+                              "fontSize": 14,
+                              "fontWeight": "700"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "RYicX",
+                          "name": "q5Info",
+                          "fill": "#FFFFFF",
+                          "content": "怡君  ·  2次上場",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "s82lD",
+                          "name": "q5Badge",
+                          "fill": "#0A3318",
+                          "cornerRadius": 14,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "8TMuW",
+                              "name": "q5BadgeTxt",
+                              "fill": "#32D74B",
+                              "content": "已繳費 ✓",
+                              "fontFamily": "Inter",
+                              "fontSize": 11,
+                              "fontWeight": "700"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "iEmj8",
+                      "name": "q6Row",
+                      "width": "fill_container",
+                      "fill": "#1A100A",
+                      "cornerRadius": 12,
+                      "stroke": {
+                        "align": "inside",
+                        "thickness": 1
+                      },
+                      "gap": 10,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "U0PeN",
+                          "name": "q6Av",
+                          "width": 40,
+                          "height": 40,
+                          "fill": "#1A4A6B",
+                          "cornerRadius": 20,
+                          "layout": "vertical",
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "AQlN0",
+                              "name": "q6Init",
+                              "fill": "#FFFFFF",
+                              "content": "怡",
+                              "fontFamily": "Inter",
+                              "fontSize": 14,
+                              "fontWeight": "700"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "37LaZ",
+                          "name": "q6Info",
+                          "fill": "#FFFFFF",
+                          "content": "欣怡  ·  5次上場",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "FGokc",
+                          "name": "q6Badge",
+                          "fill": "#3B0A0A",
+                          "cornerRadius": 14,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "WIho1",
+                              "name": "q6BadgeTxt",
+                              "fill": "#FF453A",
+                              "content": "未繳費",
+                              "fontFamily": "Inter",
+                              "fontSize": 11,
+                              "fontWeight": "700"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "Xtz0B",
+                      "name": "q7Row",
+                      "width": "fill_container",
+                      "fill": "#132D1A",
+                      "cornerRadius": 12,
+                      "stroke": {
+                        "align": "inside",
+                        "thickness": 1
+                      },
+                      "gap": 10,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "IJzQf",
+                          "name": "q7Av",
+                          "width": 40,
+                          "height": 40,
+                          "fill": "#2D1A00",
+                          "cornerRadius": 20,
+                          "layout": "vertical",
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "9doFE",
+                              "name": "q7Init",
+                              "fill": "#FFB800",
+                              "content": "偉",
+                              "fontFamily": "Inter",
+                              "fontSize": 14,
+                              "fontWeight": "700"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "l3vor",
+                          "name": "q7Info",
+                          "fill": "#FFFFFF",
+                          "content": "大偉  ·  0次上場",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "uo3qn",
+                          "name": "q7Badge",
+                          "fill": "#0A3318",
+                          "cornerRadius": 14,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "RXwZ7",
+                              "name": "q7BadgeTxt",
+                              "fill": "#32D74B",
+                              "content": "已繳費 ✓",
+                              "fontFamily": "Inter",
+                              "fontSize": 11,
+                              "fontWeight": "700"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "2cWoE",
+                      "name": "q8Row",
+                      "width": "fill_container",
+                      "fill": "#132D1A",
+                      "cornerRadius": 12,
+                      "stroke": {
+                        "align": "inside",
+                        "thickness": 1
+                      },
+                      "gap": 10,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "XCcjh",
+                          "name": "q8Av",
+                          "width": 40,
+                          "height": 40,
+                          "fill": "#3D0010",
+                          "cornerRadius": 20,
+                          "layout": "vertical",
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "Sr2y7",
+                              "name": "q8Init",
+                              "fill": "#FF4060",
+                              "content": "玲",
+                              "fontFamily": "Inter",
+                              "fontSize": 14,
+                              "fontWeight": "700"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "xRVnG",
+                          "name": "q8Info",
+                          "fill": "#FFFFFF",
+                          "content": "美玲  ·  4次上場",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "HCIBM",
+                          "name": "q8Badge",
+                          "fill": "#0A3318",
+                          "cornerRadius": 14,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "t0KLF",
+                              "name": "q8BadgeTxt",
+                              "fill": "#32D74B",
+                              "content": "已繳費 ✓",
+                              "fontFamily": "Inter",
+                              "fontSize": 11,
+                              "fontWeight": "700"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "2AYlV",
+          "name": "Bottom Bar 2",
+          "width": "fill_container",
+          "fill": "#0A1C10",
+          "gap": 14,
+          "padding": [
+            12,
+            16
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "Wnavm",
+              "name": "totalBlk",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 3,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "qcHjR",
+                  "name": "totalLbl",
+                  "fill": "rgba(255,255,255,0.4)",
+                  "content": "本場總計",
+                  "fontFamily": "Inter",
+                  "fontSize": 10,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "cdtZ3",
+                  "name": "totalAmt",
+                  "fill": "#86EFAC",
+                  "content": "NT$ 1,200",
+                  "fontFamily": "Inter",
+                  "fontSize": 18,
+                  "fontWeight": "700"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "aA9On",
+              "name": "cta2Btn",
+              "width": 81,
+              "height": 40,
+              "fill": "#22C55E",
+              "cornerRadius": 16,
+              "gap": 6,
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "icon_font",
+                  "id": "Fenl8",
+                  "name": "cta2Icon",
+                  "width": 0,
+                  "height": 0,
+                  "iconFontFamily": "Material Symbols Rounded",
+                  "fill": "#001A00"
+                },
+                {
+                  "type": "text",
+                  "id": "nBspG",
+                  "name": "cta2Txt",
+                  "fill": "#001A00",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "全部已繳費",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "700"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "bi8Au",
+      "x": 0,
+      "y": 0,
+      "name": "App Screen",
+      "clip": true,
+      "width": 393,
+      "height": 852,
+      "fill": "#0F4C29",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "sLkIY",
+          "name": "Status Bar",
+          "width": "fill_container",
+          "height": 62,
+          "fill": "#0D3B1F",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "lD1Yx",
+              "name": "timeText",
+              "fill": "#FFFFFF",
+              "content": "9:41",
+              "fontFamily": "Inter",
+              "fontSize": 15,
+              "fontWeight": "600"
+            },
+            {
+              "type": "icon_font",
+              "id": "5aFyv",
+              "name": "battIcon",
+              "width": 0,
+              "height": 0,
+              "iconFontFamily": "Material Symbols Rounded",
+              "fill": "#FFFFFF"
+            },
+            {
+              "type": "icon_font",
+              "id": "GUzbW",
+              "name": "wifiIcon",
+              "width": 0,
+              "height": 0,
+              "iconFontFamily": "Material Symbols Rounded",
+              "fill": "#FFFFFF"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "BgXBe",
+          "name": "Scroll Area",
+          "clip": true,
+          "width": "fill_container",
+          "height": "fill_container",
+          "layout": "vertical",
+          "children": [
+            {
+              "type": "frame",
+              "id": "CvBvp",
+              "name": "Content Wrapper",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 20,
+              "padding": 16,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "IdVqw",
+                  "name": "Header",
+                  "width": "fill_container",
+                  "gap": 8,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "HYKug",
+                      "name": "titleBlock",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 4,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "f40qZ",
+                          "name": "subLabel",
+                          "fill": "#86EFAC",
+                          "content": "8 位成員 · 等待開始",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "nboyO",
+                          "name": "mainTitle",
+                          "fill": "#FFFFFF",
+                          "content": "🏸 羽球場管理",
+                          "fontFamily": "Inter",
+                          "fontSize": 20,
+                          "fontWeight": "700"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "V6B80",
+                      "name": "actions",
+                      "gap": 8,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "mF6qe",
+                          "name": "addBtn",
+                          "width": 88,
+                          "height": 36,
+                          "fill": "#FBBF24",
+                          "cornerRadius": 14,
+                          "padding": [
+                            0,
+                            12
+                          ],
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "hjVh1",
+                              "name": "addLabel",
+                              "fill": "#78350F",
+                              "textGrowth": "fixed-width",
+                              "width": 56,
+                              "content": "💰 收款",
+                              "fontFamily": "Inter",
+                              "fontSize": 13,
+                              "fontWeight": "700"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "Bj5kZ",
+                  "name": "Court Section",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "9tUvT",
+                      "name": "Court Card",
+                      "width": "fill_container",
+                      "height": 195,
+                      "fill": "#1B5E35",
+                      "cornerRadius": 20,
+                      "layout": "none",
+                      "children": [
+                        {
+                          "type": "rectangle",
+                          "cornerRadius": 4,
+                          "id": "P6FTC",
+                          "x": 8,
+                          "y": 8,
+                          "name": "courtBorder",
+                          "fill": "none",
+                          "width": 329,
+                          "height": 164,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 2.5
+                          }
+                        },
+                        {
+                          "type": "rectangle",
+                          "id": "OYNoC",
+                          "x": 8,
+                          "y": 20,
+                          "name": "singlesTop",
+                          "fill": "#FFFFFF",
+                          "width": 329,
+                          "height": 2
+                        },
+                        {
+                          "type": "rectangle",
+                          "id": "9HhyY",
+                          "x": 8,
+                          "y": 160,
+                          "name": "singlesBtm",
+                          "fill": "#FFFFFF",
+                          "width": 329,
+                          "height": 2
+                        },
+                        {
+                          "type": "rectangle",
+                          "id": "OFqL5",
+                          "x": 124,
+                          "y": 8,
+                          "name": "sslLeft",
+                          "fill": "#FFFFFF",
+                          "width": 2,
+                          "height": 164
+                        },
+                        {
+                          "type": "rectangle",
+                          "id": "9zrja",
+                          "x": 221,
+                          "y": 8,
+                          "name": "sslRight",
+                          "fill": "#FFFFFF",
+                          "width": 2,
+                          "height": 164
+                        },
+                        {
+                          "type": "rectangle",
+                          "id": "yRxRh",
+                          "x": 27,
+                          "y": 8,
+                          "name": "lslLeft",
+                          "fill": "#FFFFFF",
+                          "width": 2,
+                          "height": 164
+                        },
+                        {
+                          "type": "rectangle",
+                          "id": "E6Do4",
+                          "x": 318,
+                          "y": 8,
+                          "name": "lslRight",
+                          "fill": "#FFFFFF",
+                          "width": 2,
+                          "height": 164
+                        },
+                        {
+                          "type": "rectangle",
+                          "id": "9NqHN",
+                          "x": 8,
+                          "y": 90,
+                          "name": "centerLeft",
+                          "fill": "#FFFFFF",
+                          "width": 116,
+                          "height": 2
+                        },
+                        {
+                          "type": "rectangle",
+                          "id": "mGwiI",
+                          "x": 223,
+                          "y": 90,
+                          "name": "centerRight",
+                          "fill": "#FFFFFF",
+                          "width": 114,
+                          "height": 2
+                        },
+                        {
+                          "type": "rectangle",
+                          "id": "6wqSd",
+                          "x": 167,
+                          "y": 8,
+                          "name": "netBody",
+                          "opacity": 0.65,
+                          "fill": "#111111",
+                          "width": 11,
+                          "height": 164
+                        },
+                        {
+                          "type": "rectangle",
+                          "cornerRadius": 3,
+                          "id": "ZZPn8",
+                          "x": 160,
+                          "y": 3,
+                          "name": "netTape",
+                          "fill": "#FFFFFF",
+                          "width": 25,
+                          "height": 12
+                        },
+                        {
+                          "type": "text",
+                          "id": "kTrN1",
+                          "x": 20,
+                          "y": 176,
+                          "name": "teamA",
+                          "fill": "#F59E0B",
+                          "content": "🟡 A 隊",
+                          "textAlign": "center",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "4Mazs",
+                          "x": 245,
+                          "y": 176,
+                          "name": "teamB",
+                          "fill": "#3B82F6",
+                          "content": "🔵 B 隊",
+                          "textAlign": "center",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "ellipse",
+                          "id": "hIWq0",
+                          "x": 50,
+                          "y": 29,
+                          "name": "slot0circle",
+                          "fill": "rgba(255,255,255,0.92)",
+                          "width": 52,
+                          "height": 52,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 3
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "id": "n3pfA",
+                          "x": 62,
+                          "y": 36,
+                          "name": "slot0emoji",
+                          "content": "😀",
+                          "fontFamily": "Apple Color Emoji, sans-serif",
+                          "fontSize": 26,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "Eg1mY",
+                          "x": 38,
+                          "y": 83,
+                          "name": "slot0name",
+                          "fill": "#FFFFFF",
+                          "content": "小明",
+                          "textAlign": "center",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "ellipse",
+                          "id": "hKa7I",
+                          "x": 50,
+                          "y": 99,
+                          "name": "slot1circle",
+                          "fill": "rgba(255,255,255,0.92)",
+                          "width": 52,
+                          "height": 52,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 3
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "id": "r7X0M",
+                          "x": 62,
+                          "y": 106,
+                          "name": "slot1emoji",
+                          "content": "😎",
+                          "fontFamily": "Apple Color Emoji, sans-serif",
+                          "fontSize": 26,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "jct0u",
+                          "x": 38,
+                          "y": 153,
+                          "name": "slot1name",
+                          "fill": "#FFFFFF",
+                          "content": "志豪",
+                          "textAlign": "center",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "ellipse",
+                          "id": "wx2KK",
+                          "x": 243,
+                          "y": 29,
+                          "name": "slot2circle",
+                          "fill": "rgba(255,255,255,0.92)",
+                          "width": 52,
+                          "height": 52,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 3
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "id": "Y9u77",
+                          "x": 255,
+                          "y": 36,
+                          "name": "slot2emoji",
+                          "content": "🥷",
+                          "fontFamily": "Apple Color Emoji, sans-serif",
+                          "fontSize": 26,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "oaBeB",
+                          "x": 231,
+                          "y": 83,
+                          "name": "slot2name",
+                          "fill": "#FFFFFF",
+                          "content": "大偉",
+                          "textAlign": "center",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "ellipse",
+                          "id": "7vrFh",
+                          "x": 243,
+                          "y": 99,
+                          "name": "slot3circle",
+                          "fill": "rgba(255,255,255,0.92)",
+                          "width": 52,
+                          "height": 52,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 3
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "id": "NtyOe",
+                          "x": 255,
+                          "y": 106,
+                          "name": "slot3emoji",
+                          "content": "🤩",
+                          "fontFamily": "Apple Color Emoji, sans-serif",
+                          "fontSize": 26,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "zwoSo",
+                          "x": 231,
+                          "y": 153,
+                          "name": "slot3name",
+                          "fill": "#FFFFFF",
+                          "content": "小芳",
+                          "textAlign": "center",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "700"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "PCnqP",
+                      "name": "Action Buttons",
+                      "width": "fill_container",
+                      "gap": 8,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "IjALQ",
+                          "name": "startBtn",
+                          "width": "fill_container",
+                          "height": 48,
+                          "fill": "#FBBF24",
+                          "cornerRadius": 14,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 2
+                          },
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "v2jY2",
+                              "fill": "#78350F",
+                              "content": "🎮 開始比賽",
+                              "fontFamily": "Inter",
+                              "fontSize": 15,
+                              "fontWeight": "700"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "7gVxh",
+                          "name": "finishBtn",
+                          "width": "fill_container",
+                          "height": 48,
+                          "fill": "#EF4444",
+                          "cornerRadius": 14,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 2
+                          },
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "e3Bq7",
+                              "fill": "#FFFFFF",
+                              "content": "🏆 結束本局",
+                              "fontFamily": "Inter",
+                              "fontSize": 15,
+                              "fontWeight": "700"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "0fu13",
+                  "name": "Playing Panel",
+                  "clip": true,
+                  "width": "fill_container",
+                  "fill": "rgba(255,255,255,0.08)",
+                  "cornerRadius": 20,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1
+                  },
+                  "layout": "vertical",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "ikXuL",
+                      "name": "playHdr",
+                      "width": "fill_container",
+                      "height": 44,
+                      "fill": "#D97706",
+                      "gap": 8,
+                      "padding": [
+                        0,
+                        14
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "KTHvB",
+                          "content": "🏟️",
+                          "fontFamily": "Inter",
+                          "fontSize": 18,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "lhMrE",
+                          "fill": "#FFFFFF",
+                          "content": "場地",
+                          "fontFamily": "Inter",
+                          "fontSize": 15,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "fPPZZ",
+                          "name": "hdBadge",
+                          "fill": "rgba(0,0,0,0.25)",
+                          "cornerRadius": 12,
+                          "padding": [
+                            3,
+                            8
+                          ],
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "AuSSB",
+                              "fill": "#FFFFFF",
+                              "content": "2 / 4",
+                              "fontFamily": "Inter",
+                              "fontSize": 11,
+                              "fontWeight": "700"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "Mp6V7",
+                      "name": "playBody",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "padding": 10,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "BHLPM",
+                          "name": "pr1",
+                          "width": "fill_container",
+                          "fill": "rgba(255,255,255,0.12)",
+                          "cornerRadius": 14,
+                          "gap": 10,
+                          "padding": [
+                            8,
+                            12
+                          ],
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "8HKJt",
+                              "content": "😀",
+                              "fontFamily": "Inter",
+                              "fontSize": 24,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "0Gqch",
+                              "fill": "#FFFFFF",
+                              "content": "小明 · 🏸 3 局",
+                              "fontFamily": "Inter",
+                              "fontSize": 13,
+                              "fontWeight": "700"
+                            },
+                            {
+                              "type": "text",
+                              "id": "nV9tQ",
+                              "fill": "#FCD34D",
+                              "content": "⚔️ 對戰中",
+                              "fontFamily": "Inter",
+                              "fontSize": 11,
+                              "fontWeight": "700"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "jQlrB",
+                          "name": "pr2",
+                          "width": "fill_container",
+                          "fill": "rgba(255,255,255,0.12)",
+                          "cornerRadius": 14,
+                          "gap": 10,
+                          "padding": [
+                            8,
+                            12
+                          ],
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "I4StS",
+                              "content": "😎",
+                              "fontFamily": "Inter",
+                              "fontSize": 24,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "QrLEv",
+                              "fill": "#FFFFFF",
+                              "content": "志豪 · 🏸 1 局",
+                              "fontFamily": "Inter",
+                              "fontSize": 13,
+                              "fontWeight": "700"
+                            },
+                            {
+                              "type": "text",
+                              "id": "vVbKZ",
+                              "fill": "#FCD34D",
+                              "content": "⚔️ 對戰中",
+                              "fontFamily": "Inter",
+                              "fontSize": 11,
+                              "fontWeight": "700"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "NdQXs",
+                  "name": "Waiting Panel",
+                  "clip": true,
+                  "width": "fill_container",
+                  "fill": "rgba(255,255,255,0.08)",
+                  "cornerRadius": 20,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1
+                  },
+                  "layout": "vertical",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "jglj0",
+                      "name": "wHdr",
+                      "width": "fill_container",
+                      "height": 44,
+                      "fill": "#1D4ED8",
+                      "gap": 8,
+                      "padding": [
+                        0,
+                        14
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "GqIJI",
+                          "content": "⏳",
+                          "fontFamily": "Inter",
+                          "fontSize": 18,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "FCqSu",
+                          "fill": "#FFFFFF",
+                          "content": "等候名單",
+                          "fontFamily": "Inter",
+                          "fontSize": 15,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "frgrr",
+                          "name": "wBadge",
+                          "fill": "rgba(0,0,0,0.25)",
+                          "cornerRadius": 12,
+                          "padding": [
+                            3,
+                            8
+                          ],
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "Dcw30",
+                              "fill": "#FFFFFF",
+                              "content": "4 人",
+                              "fontFamily": "Inter",
+                              "fontSize": 11,
+                              "fontWeight": "700"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "KMqeP",
+                      "name": "wBody",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "padding": 10,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "k1OYD",
+                          "name": "wm1",
+                          "width": "fill_container",
+                          "fill": "rgba(255,255,255,0.12)",
+                          "cornerRadius": 14,
+                          "gap": 10,
+                          "padding": [
+                            8,
+                            12
+                          ],
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "EfBfl",
+                              "fill": "rgba(255,255,255,0.4)",
+                              "content": "1",
+                              "textAlign": "center",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "700"
+                            },
+                            {
+                              "type": "text",
+                              "id": "Mzgfc",
+                              "content": "🥷",
+                              "fontFamily": "Inter",
+                              "fontSize": 24,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "ho54J",
+                              "fill": "#FFFFFF",
+                              "content": "大偉 · 🏸 0 局",
+                              "fontFamily": "Inter",
+                              "fontSize": 13,
+                              "fontWeight": "700"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "YNKoQ",
+                          "name": "wm2",
+                          "width": "fill_container",
+                          "fill": "rgba(255,255,255,0.12)",
+                          "cornerRadius": 14,
+                          "gap": 10,
+                          "padding": [
+                            8,
+                            12
+                          ],
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "feoxS",
+                              "fill": "rgba(255,255,255,0.4)",
+                              "content": "2",
+                              "textAlign": "center",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "700"
+                            },
+                            {
+                              "type": "text",
+                              "id": "lupNw",
+                              "content": "🤩",
+                              "fontFamily": "Inter",
+                              "fontSize": 24,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "QEu49",
+                              "fill": "#FFFFFF",
+                              "content": "小芳 · 🏸 2 局",
+                              "fontFamily": "Inter",
+                              "fontSize": 13,
+                              "fontWeight": "700"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "9uQpP",
+                  "name": "Rest Panel",
+                  "clip": true,
+                  "width": "fill_container",
+                  "fill": "rgba(255,255,255,0.08)",
+                  "cornerRadius": 20,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1
+                  },
+                  "layout": "vertical",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "SEegJ",
+                      "name": "rHdr",
+                      "width": "fill_container",
+                      "height": 44,
+                      "fill": "#7C3AED",
+                      "gap": 8,
+                      "padding": [
+                        0,
+                        14
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "Ilv9C",
+                          "content": "☕",
+                          "fontFamily": "Inter",
+                          "fontSize": 18,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "4kuf3",
+                          "fill": "#FFFFFF",
+                          "content": "休息區",
+                          "fontFamily": "Inter",
+                          "fontSize": 15,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "IU4cs",
+                          "name": "rBadge",
+                          "fill": "rgba(0,0,0,0.25)",
+                          "cornerRadius": 12,
+                          "padding": [
+                            3,
+                            8
+                          ],
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "sziW5",
+                              "fill": "#FFFFFF",
+                              "content": "1 人",
+                              "fontFamily": "Inter",
+                              "fontSize": 11,
+                              "fontWeight": "700"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "U6tzJ",
+                      "name": "rBody",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "padding": 10,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "h7xGE",
+                          "name": "rm1",
+                          "width": "fill_container",
+                          "fill": "rgba(255,255,255,0.12)",
+                          "cornerRadius": 14,
+                          "gap": 10,
+                          "padding": [
+                            8,
+                            12
+                          ],
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "SCq8k",
+                              "content": "😄",
+                              "fontFamily": "Inter",
+                              "fontSize": 24,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "9qLI1",
+                              "fill": "#FFFFFF",
+                              "content": "志明 · 🏸 1 局",
+                              "fontFamily": "Inter",
+                              "fontSize": 13,
+                              "fontWeight": "700"
+                            },
+                            {
+                              "type": "text",
+                              "id": "vwrd5",
+                              "fill": "#93C5FD",
+                              "content": "回候場",
+                              "fontFamily": "Inter",
+                              "fontSize": 11,
+                              "fontWeight": "700"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "mS2yP",
+                  "name": "Add Member Bar",
+                  "width": "fill_container",
+                  "gap": 8,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "DSehX",
+                      "name": "addInput",
+                      "width": "fill_container",
+                      "height": 44,
+                      "fill": "rgba(255,255,255,0.1)",
+                      "cornerRadius": 20,
+                      "stroke": {
+                        "align": "inside",
+                        "thickness": 1
+                      },
+                      "padding": [
+                        0,
+                        16
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "9ri67",
+                          "fill": "rgba(255,255,255,0.35)",
+                          "content": "新增成員名稱…",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "mpfgz",
+                      "name": "addBtn2",
+                      "width": 44,
+                      "height": 44,
+                      "fill": "#22C55E",
+                      "cornerRadius": 14,
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "PJfgd",
+                          "fill": "#FFFFFF",
+                          "content": "+",
+                          "fontFamily": "Inter",
+                          "fontSize": 22,
+                          "fontWeight": "700"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
